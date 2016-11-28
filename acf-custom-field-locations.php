@@ -139,7 +139,7 @@
 			foreach ($groups as $group) {
 				$fields = acf_get_fields($group['key']);
 				//echo '<pre>'; print_r($fields); echo '</pre>';//
-				if (!count($fields)) {
+				if (!is_array($fields) || !count($fields)) {
 					continue;
 				}
 				if ($group['ID'] == $this_group) {
