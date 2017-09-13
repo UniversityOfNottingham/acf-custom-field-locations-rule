@@ -62,9 +62,7 @@
 			$field_choices = array();
 			foreach ($this->fields as $key => $field) {
 				if ($field['group_key'] != $this->current_group) {
-					$field_choices[$key] = 
-							$field['group_title'].' ['.$field['group_key'].'] '.$field['field_label'].' ['.
-							$field['field_type'].' - '.$field['field_name'].' - '.$key.']';
+					$field_choices[$key] = $field['group_title'].' &#8594; '.$field['field_label'];
 				}
 			}
 			if (!count($field_choices)) {
